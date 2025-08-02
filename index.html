@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>my lup lup 💘</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio autoplay loop>
+  <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+  <div class="hearts"></div>
+
+  <div class="surat-cinta">
+    <h1>Halo cantiknya aku Siti Hanifah Juanda  🌹</h1>
+    <p>
+      hari ini tanggal 1 agustus,aku masih anggep baby pacar akuu .<br>
+      maaf belum bisa kaya orang orang di luar sana, yang bisa kasih bunga ke cewenyya. <br><br>
+      aku coba ganti dengan ini cemoga baby ceneng yaa heheheh
+      aku sayang banget sama baby, 
+      menurut aku baby bukan sekedar pacar tetapi juga <strong>home</strong> buat hatiku. 🏡❤️
+    </p>
+    <p class="penutup">Aku sayanng banget sama baby,</p>
+    <h2>— Baeeskyyy 😘</h2>
+
+    <button onclick="jawabCinta()">Klik kalau baby sayang aku 😚</button>
+    <p id="balasan"></p>
+  </div>
+
+  <script>
+    function jawabCinta() {
+  const response = document.getElementById("balasan");
+  response.innerHTML = "❤️❤️❤️ YEYYY MAKACIH BABYY WOOP YOU MOREE 😘";
+  response.style.fontSize = "20px";
+  response.style.marginTop = "20px";
+  
+  // Scroll otomatis ke bawah
+  response.scrollIntoView({ behavior: 'smooth' });
+}
+
+
+    // Efek hati jatuh
+    const heartsContainer = document.querySelector(".hearts");
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+  </script>
+</body>
+</html>
